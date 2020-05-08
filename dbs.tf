@@ -1,5 +1,5 @@
 # Number of database to create with the same Oracle home
-variable "db_count" { default=0 }
+variable "db_count" { default=3 }
 // Work around to remember to adjust the timeout 60 min/new DB.
 resource "oci_database_database" "test_database" {
   count = var.db_count
