@@ -49,10 +49,6 @@ You need to run the following:
         * terraform apply
     - Run remote on an OL instance in the cloud.
         * nohup terraform apply -auto-approve -no-color &
-        * To get around the inccorerec state problem, run the following instead.
-            - nohup ./addDB.sh dbTFfile counterVariable number of database your want &
-            - For example:
-            - nohup ./addDB.sh dbs.tf db_count 5 &
         * tail -f nohup.out
 5. Upload/push the terraform.tfstate to the repos so that participant will have the current statfile. Alternatively you can continue to the next section to use remote statefile instead.
     - **Note:** you may need to update .gitignore to remove terraform.tfstate so that git push will upload the file.
